@@ -64,11 +64,6 @@ class MoneyWidgetDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addLocaleClient(Container $container): Container
     {
         $container->set(static::CLIENT_LOCALE, function (Container $container): MoneyWidgetToLocaleClientInterface {
@@ -133,11 +128,6 @@ class MoneyWidgetDependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addClientLocale(Container $container): Container
     {
         $container->set(static::CLIENT_LOCALE, function (Container $container) {

@@ -22,9 +22,6 @@ class MoneyWidgetToLocaleClientBridge implements MoneyWidgetToLocaleClientInterf
         $this->localeClient = $localeClient;
     }
 
-    /**
-     * @return string
-     */
     public function getCurrentLocale(): string
     {
         return $this->localeClient->getCurrentLocale();

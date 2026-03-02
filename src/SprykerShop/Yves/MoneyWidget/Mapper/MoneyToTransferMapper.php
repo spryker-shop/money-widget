@@ -18,9 +18,6 @@ class MoneyToTransferMapper extends SharedMoneyToTransferMapper
      */
     protected $currencyPlugin;
 
-    /**
-     * @param \SprykerShop\Yves\CurrencyWidget\Plugin\CurrencyPluginInterface $currencyPlugin
-     */
     public function __construct(CurrencyPluginInterface $currencyPlugin)
     {
         $this->currencyPlugin = $currencyPlugin;

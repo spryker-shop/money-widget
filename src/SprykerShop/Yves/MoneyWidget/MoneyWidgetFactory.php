@@ -100,9 +100,6 @@ class MoneyWidgetFactory extends AbstractFactory
         return $this->getProvidedDependency(MoneyWidgetDependencyProvider::CURRENCY_PLUGIN);
     }
 
-    /**
-     * @return \SprykerShop\Yves\MoneyWidget\Dependency\Client\MoneyWidgetToLocaleClientInterface
-     */
     public function getLocaleClient(): MoneyWidgetToLocaleClientInterface
     {
         return $this->getProvidedDependency(MoneyWidgetDependencyProvider::CLIENT_LOCALE);

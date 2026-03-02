@@ -19,25 +19,16 @@ class CurrencyIsoCodeWidget extends AbstractWidget
         $this->addParameter('currencyIsoCode', $this->getCurrencyIsoCode());
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'CurrencyIsoCodeWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@MoneyWidget/views/currency-iso-code/currency-iso-code.twig';
     }
 
-    /**
-     * @return string|null
-     */
     public function getCurrencyIsoCode(): ?string
     {
         return $this->getFactory()->getCurrencyPlugin()->getCurrent()->getCode();

@@ -45,11 +45,6 @@ class MoneyWidgetTwigPlugin extends AbstractPlugin implements TwigPluginInterfac
         return $twig;
     }
 
-    /**
-     * @param \Twig\Environment $twig
-     *
-     * @return \Twig\Environment
-     */
     protected function addTwigFunctions(Environment $twig): Environment
     {
         $twig->addFunction($this->getMoneySymbolFunction());
@@ -58,9 +53,6 @@ class MoneyWidgetTwigPlugin extends AbstractPlugin implements TwigPluginInterfac
         return $twig;
     }
 
-    /**
-     * @return \Twig\TwigFunction
-     */
     protected function getMoneySymbolFunction(): TwigFunction
     {
         return new TwigFunction(static::FUNCTION_NAME_MONEY_SYMBOL, function (?string $isoCode = null) {

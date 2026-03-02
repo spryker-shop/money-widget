@@ -67,11 +67,6 @@ class MoneyTwigPlugin extends AbstractPlugin implements TwigPluginInterface
         return $twig;
     }
 
-    /**
-     * @param \Twig\Environment $twig
-     *
-     * @return \Twig\Environment
-     */
     protected function addTwigFilters(Environment $twig): Environment
     {
         $twig->addFilter($this->getMoneyFilter());
@@ -80,11 +75,6 @@ class MoneyTwigPlugin extends AbstractPlugin implements TwigPluginInterface
         return $twig;
     }
 
-    /**
-     * @param \Twig\Environment $twig
-     *
-     * @return \Twig\Environment
-     */
     protected function addTwigFunctions(Environment $twig): Environment
     {
         $twig->addFunction($this->getMoneySymbolFunction());
@@ -93,9 +83,6 @@ class MoneyTwigPlugin extends AbstractPlugin implements TwigPluginInterface
         return $twig;
     }
 
-    /**
-     * @return \Twig\TwigFilter
-     */
     protected function getMoneyFilter(): TwigFilter
     {
         return new TwigFilter(static::FILTER_NAME_MONEY, function ($money, bool $withSymbol = true, ?string $isoCode = null) {
@@ -118,9 +105,6 @@ class MoneyTwigPlugin extends AbstractPlugin implements TwigPluginInterface
         });
     }
 
-    /**
-     * @return \Twig\TwigFilter
-     */
     protected function getMoneyRawFilter(): TwigFilter
     {
         return new TwigFilter(static::FILTER_NAME_MONEY_RAW, function ($money, $isoCode = null) {
@@ -137,9 +121,6 @@ class MoneyTwigPlugin extends AbstractPlugin implements TwigPluginInterface
         });
     }
 
-    /**
-     * @return \Twig\TwigFunction
-     */
     protected function getMoneySymbolFunction(): TwigFunction
     {
         return new TwigFunction(static::FUNCTION_NAME_MONEY_SYMBOL, function (?string $isoCode = null) {
